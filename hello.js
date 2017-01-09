@@ -24,3 +24,6 @@ var server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, function() {
     console.log('%s listening to %s', server.name, server.url);
 });
+
+// Listen to Post Route - /api/messages (conventional route for Bot messages)
+server.post('/api/messages', connector.listen());
