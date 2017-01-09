@@ -17,9 +17,13 @@ var bot = new builder.UniversalBot(connector);
 // });
 
 // Bot Dialog based on Waterfall Approach
-bot.dialog('/',
-    // First Function 
+bot.dialog('/',[
+    // First Function - Asks Question / Prompt
     function(session) {
         builder.prompt.text('Please enter your name: ');
+    },
+    // Second Function - Responds with Prompted Answer
+    function(session, result) {
+        session.send('Hello, ' + result);
     }
-)
+]);
