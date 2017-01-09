@@ -1,5 +1,6 @@
-// Import bot module
-var builder = require('botbuilder');
+// Import modules
+var builder = require('botbuilder');    // Bots
+var restify = require('restify');       // REST APIs
 
 // Connect Bots - Create Chat Connector
 var connector = new builder.ChatConnector().listen();
