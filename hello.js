@@ -1,8 +1,8 @@
 // Import bot module
 var builder = require('botbuilder');
 
-// Connect Bots - Create Console Connector
-var connector = new builder.ConsoleConnector().listen();
+// Connect Bots - Create Chat Connector
+var connector = new builder.ChatConnector().listen();
 
 // Bot Object - Create Bot
 var bot = new builder.UniversalBot(connector);
