@@ -8,6 +8,7 @@ var connector = new builder.ConsoleConnector().listen();
 var bot = new builder.UniversalBot(connector);
 
 // Bot Dialog
+// Note: Session object know the context and communicates with User
 bot.dialog('/', function(session){
     session.send('Hello, Human!');
 });
