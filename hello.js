@@ -16,3 +16,7 @@ bot.dialog('/', function(session){
     // Respond to User
     session.send('You said: ' + userMessage);
 });
+
+// Create Server Object using Restify 
+var server = restify.createServer();
+
