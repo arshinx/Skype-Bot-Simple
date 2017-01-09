@@ -20,3 +20,7 @@ bot.dialog('/', function(session){
 // Create Server Object using Restify 
 var server = restify.createServer();
 
+// Set Port for Server 
+server.listen(process.env.port || process.env.PORT || 3978, function() {
+    console.log('%s listening to %s', server.name, server.url);
+});
