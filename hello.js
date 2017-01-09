@@ -20,10 +20,10 @@ var bot = new builder.UniversalBot(connector);
 bot.dialog('/',[
     // First Function - Asks Question / Prompt
     function(session) {
-        builder.prompt.text('Please enter your name: ');
+        builder.Prompts.text(session, 'Please enter your name: ');
     },
     // Second Function - Responds with Prompted Answer
     function(session, result) {
-        session.send('Hello, ' + result);
+        session.send('Hello, ' + result.response);
     }
 ]);
