@@ -8,8 +8,6 @@ var connector = new builder.ChatConnector();
 // Bot Object - Create Bot
 var bot = new builder.UniversalBot(connector);
 
-
-
 // Bot Dialog
 // Note: Session object know the context and communicates with User
 // bot.dialog('/', function(session){
