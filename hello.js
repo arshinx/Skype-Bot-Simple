@@ -16,7 +16,7 @@ var bot = new builder.UniversalBot(connector);
 //     session.send('You said: ' + userMessage);
 // });
 
-// Bot Dialog based on Waterfall Approach
+// Bot Dialog based on Waterfall Approach: Moving linearly in functions
 bot.dialog('/',[
     // First Function - Asks Question / Prompt
     function(session) {
