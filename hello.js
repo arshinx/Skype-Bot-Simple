@@ -8,6 +8,18 @@ var connector = new builder.ChatConnector();
 // Bot Object - Create Bot
 var bot = new builder.UniversalBot(connector);
 
+
+
+// Bot Dialog
+// Note: Session object know the context and communicates with User
+// bot.dialog('/', function(session){
+//     // Retrieve User Input
+//     var userMessage = session.message.text;
+//     // Respond to User
+//     session.send('You said: ' + userMessage);
+// });
+
+
 // Bot Dialog based on Waterfall Approach: Moving linearly in functions
 bot.dialog('/',[
     // First Function - Asks Question / Prompt
@@ -18,6 +30,7 @@ bot.dialog('/',[
     function(session, result) {
         session.send('Hello, ' + result.response);
     }
+
 ]);
 
 // Create Server Object using Restify 
@@ -30,3 +43,6 @@ server.listen(process.env.port || process.env.PORT || 3000, function() {
 
 // Listen to Post Route - /api/messages (conventional route for Bot messages)
 server.post('/api/messages', connector.listen());
+
+]);
+
