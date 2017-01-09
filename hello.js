@@ -9,9 +9,11 @@ var bot = new builder.UniversalBot(connector);
 
 // Bot Dialog
 // Note: Session object know the context and communicates with User
-bot.dialog('/', function(session){
-    // Retrieve User Input
-    var userMessage = session.message.text;
-    // Respond to User
-    session.send('You said: ' + userMessage);
-});
+// bot.dialog('/', function(session){
+//     // Retrieve User Input
+//     var userMessage = session.message.text;
+//     // Respond to User
+//     session.send('You said: ' + userMessage);
+// });
+
+// Bot Dialog based on Waterfall Approach
